@@ -1,7 +1,7 @@
-const dotenv = require("dotenv");
-const mysql = require("mysql");
+const dotenv = require('dotenv');
+const mysql = require('mysql');
 
-dotenv.config({ path: `${__dirname}\\.env` });
+dotenv.config({ path: `${__dirname}/.env` });
 const connection = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,
@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
   if (!err) {
-    console.log("Database is connected ... ");
+    console.log('Database is connected ... ');
   } else {
     console.log(err);
   }
